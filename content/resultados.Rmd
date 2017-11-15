@@ -64,7 +64,7 @@ kable(areas[order(areas$colegio,areas$grande.area, areas$res.area),],
 A proporção de títulos potencialmente predatórios por área é pequena, mas ainda assim varia em uma ordem de grandeza, 
 o que indica tendências diversas dos programas de pós-graduação de cada área em publicar nestes periódicos:
 
-```{r numeros por area}
+```{r numeros_por_area}
 tmp <- n.pred2
 tmp$ppred <- round(100*tmp$tot.pred/tmp$tot,2)
 tmp$ppredAB <- round(100*(tmp$tot.pred-tmp$C)/tmp$tot,2)
