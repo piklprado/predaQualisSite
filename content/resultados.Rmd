@@ -210,41 +210,41 @@ potencialmente predatórios.
   no fator de impacto e (ii) critérios para estrato médio focado em
   presença em bases de indexação, número de artigos da área na revista
   e critérios subjetivos. 
-		+ No primeiro caso, em geral os estratos mais altos são
-          definidos por ter fator de impacto medido pelo 
-		  [*Journal Citation
-          Reports*[(https://clarivate.com/products/journal-citation-reports/)
-          (JCR) 
-		  nos quartis mais altos de impacto dos periódicos da área. Isso
-          pode excluir muitos títulos predatórios, mas alguns
-          periódicos são suspeitos de serem predatórios justamente por
-          práticas questionáveis para aumentar o seu
-          fator de impacto. Dois casos famosos são *Oncotarget* e
-          *Aging*, ambos da editora comercial Impact Journals ,
-          editados por Mikhail V. Blagosklonnye. A página da editora é
-          vazia (http://www.impactjournals.com/) e  há fortes indícios
-          de que estes periódicos usem práticas condenáveis para
-          aumentar impacto, sob o comando de Blagosklonnye [^2]. Estes
-          dois periódicos e mais um da mesma editora, *Genes & Cancer*
-          foram aclassificados nos estratos A e B1-B3 
-		  de várias áreas das Ciências da Vida. Buscamos agora
-          exemplos análogos de outra áreas do conhecimento. 
-		+ No segundo caso, a inclusão de periódicos nos estratos mais
-          baixos da faixa B, o critério de impacto no JCR é substituído ou
-          ponderado pela mera presença em certas bases bibliográficas,
-          além da WoS. SCOPUS, PubMed e Scielo são alguns exemplos. A
-          presença de periódicos potencialmente predatórios 
-		  mesmo em bases como a SCOPUS indica que este critério é
-          problemático.	
-		  Reforça este argumento que cerca de 30% dos títulos de editoras apontadas
-          como predatórias na lista de Bealls foram retirados da
-          SCOPUS em 2017. Muitas áreas também usam como critério
-          adicional para pontuar no QUALIS o quanto a área publica no
-          periódico, o que evidentemente tem potencial para
-          retroalimentar o uso de periódicos predatórios. Por fim, há
-          vários critérios mais subjetivos de importância dos
-          periódicos, e que muitas vezes não estão claros nos
-          documentos de avaliação. 
+  + No primeiro caso, em geral os estratos mais altos são
+definidos por ter fator de impacto medido pelo 
+[*Journal Citation
+Reports*[(https://clarivate.com/products/journal-citation-reports/)
+(JCR) 
+nos quartis mais altos de impacto dos periódicos da área. Isso
+	pode excluir muitos títulos predatórios, mas alguns
+periódicos são suspeitos de serem predatórios justamente por
+práticas questionáveis para aumentar o seu
+fator de impacto. Dois casos famosos são *Oncotarget* e
+*Aging*, ambos da editora comercial Impact Journals ,
+editados por Mikhail V. Blagosklonnye. A página da editora é
+vazia (http://www.impactjournals.com/) e  há fortes indícios
+de que estes periódicos usem práticas condenáveis para
+aumentar impacto, sob o comando de Blagosklonnye [^2]. Estes
+dois periódicos e mais um da mesma editora, *Genes & Cancer*
+foram aclassificados nos estratos A e B1-B3 
+de várias áreas das Ciências da Vida. Buscamos agora
+exemplos análogos de outra áreas do conhecimento. 
++ No segundo caso, a inclusão de periódicos nos estratos mais
+baixos da faixa B, o critério de impacto no JCR é substituído ou
+ponderado pela mera presença em certas bases bibliográficas,
+além da WoS. SCOPUS, PubMed e Scielo são alguns exemplos. A
+presença de periódicos potencialmente predatórios 
+	mesmo em bases como a SCOPUS indica que este critério é
+problemático.	
+Reforça este argumento que cerca de 30% dos títulos de editoras apontadas
+como predatórias na lista de Bealls foram retirados da
+SCOPUS em 2017. Muitas áreas também usam como critério
+	adicional para pontuar no QUALIS o quanto a área publica no
+periódico, o que evidentemente tem potencial para
+retroalimentar o uso de periódicos predatórios. Por fim, há
+vários critérios mais subjetivos de importância dos
+periódicos, e que muitas vezes não estão claros nos
+documentos de avaliação. 
 * Um ponto importante é que a maioria dos periódicos potencialmente
   predatórios foi avaliada por mais de uma área, sendo que na maioria
   dos casos pelo menos uma área os classificou como "C". Vale também
