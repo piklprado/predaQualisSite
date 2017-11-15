@@ -1,5 +1,5 @@
 baseurl = "/"
-languageCode = "en-us"
+languageCode = "pt-BR"
 title = "Preda Qualis"
 theme = "hugo-ivy"
 googleAnalytics = ""
