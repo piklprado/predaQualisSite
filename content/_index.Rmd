@@ -27,8 +27,8 @@ para:
 
 ## O QUALIS
 
-O [QUALIS](https://qualis.capes.gov.br/) é a classificação de todos os periódicos em que participantes dos programas de pós-graduação
-do Brasil publicam seus artigos. A base é usada na avaliação da produção dos programas, um dos
+[QUALIS](https://qualis.capes.gov.br/) é a classificação de todos os periódicos em que participantes dos programas de pós-graduação
+do Brasil publicam seus artigos. A base é usada na avaliação da produção científica, um dos
 principais critérios para [Avaliação Quadrienal dos Programa de Pós-Graduação](http://avaliacaoquadrienal.capes.gov.br/), 
 feita pela CAPES.
 
@@ -53,11 +53,11 @@ Esta revisão deve ser feita por pareceristas independentes que atuam na área
 e acompanhada por um editor da revista, também com formação científica.
 
 Por ser criteriosa, frequentemente envolver mais de uma rodada de revisões e muitas vezes
-depender do trabalho voluntário de revisores e editores, a revisão de um artigo até a decisão de 
-publicá-lo ou não demora meses nas revistas científicas legítimas. 
-Já os periódicos predatórios não têm este rigor e aceitam
-rapidamente artigos. Assim, burlam um dos princípios fundamentais que a ciência
-usa para garantir rigor ao conhecimento que produz e trás a público.
+depender do trabalho voluntário de revisores e editores, a revisão correta 
+de um artigo até a decisão de  publicá-lo ou não demora meses. 
+Já os periódicos predatórios e aceitam artigos rápido e sem critério. 
+Assim, burlam um dos princípios fundamentais que a ciência
+tem para zelar pela qualidade do conhecimento que produz e traz a público.
 
 #### Para saber mais sobre periódicos predatórios
 
