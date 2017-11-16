@@ -21,6 +21,6 @@ O site é construído usando [blogdown](https://bookdown.org/) e montado com o h
 Algumas dependências no R (além dos suspeitos usuais: tidyr, rmarkdown etc.)
 
 ```r
-   install.packages('blogdown', 'DT', 'VennDiagram', 'captioner')
+   install.packages(c('blogdown', 'DT', 'VennDiagram', 'captioner'))
    blogdown::install_hugo()
 ```
