@@ -26,7 +26,7 @@ tbls <- captioner(prefix="Tabela")
 tbls(name="areas", "Áreas da avaliação CAPES 2013-2016. A última coluna foi acrescentada por nós e não faz parte da classificação CAPES.")
 tbls(name="n-por-area", "Número de periódicos e de potencialmente predatórios, por área de avaliação. Também indicadas os percentuais do total de títulos potencialmente predatórios  e potencialmente predatórios classificados nos estratos A e B. As área estão em ordem crescente da proporção de potenciais predatórios classificados nos estratos A ou B.")
 
-tbls(name="perc_estrato", "Percentual de predatórios entre periódicos em cada estrato QUALIS. Indicados a média do percentual sobre as 49 áreas de avaliação, bem como os percentuais mínimos e máximos.")
+tbls(name="perc-estrato", "Percentual de predatórios entre periódicos em cada estrato QUALIS. Indicados a média do percentual sobre as 49 áreas de avaliação, bem como os percentuais mínimos e máximos.")
 
 tbls(name= "n-pred-area", "Número de periódicos potencialmente predatórios e percentual destes classificados no estrato QUALIS C, por área de avaliação. As áreas estão agregadas por grande área e então ordenadas pela proporção de potenciais predatórios classificados no estrato C.")
 
