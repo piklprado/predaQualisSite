@@ -27,7 +27,7 @@ para:
 # IMPORTANTE
 
 * A lista de títulos potencialmente predatórios que compilamos **não é uma palavra final** 
-e está em constante revisão, **podendo ser usada como subsídio para avaliações caso a caso e 
+e está em constante revisão, **devendo ser usada como subsídio para avaliações caso a caso e 
 a critério dos autores e instituições**. 
 * Reiteramos que apresentamos estes resultados na intenção de
 contribuir para o aperfeiçoamento dos critérios
@@ -78,7 +78,7 @@ tem para zelar pela qualidade do conhecimento que produz e traz a público.
 * [Comittee on Publication Ethics](https://publicationethics.org/)
 * [Predatory Journals, Wikipedia](https://en.wikipedia.org/wiki/Predatory_open_access_publishing)
 * [Directory of Open Access Journals](https://doaj.org/), uma certificação de boas práticas para periódicos de acesso aberto
-
+* [Cobertura sobre periódicos predatórios do blog Direto da Ciência](http://www.diretodaciencia.com/tag/periodicos-predatorios/)
 
 
 
