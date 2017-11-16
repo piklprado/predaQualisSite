@@ -26,12 +26,12 @@ para:
 
 # IMPORTANTE
 
-* A lista de títulos potencialmente predatórios que compilamos *não é uma palavra final* 
+* A lista de títulos potencialmente predatórios que compilamos **não é uma palavra final** 
 e está em constante revisão. 
 Apresentamos estes resultados como um ferramenta para apoio ao aperfeiçoamento dos critérios
 de avaliação dos programas de pós-gradução.
-* O fato de um artigo ser publicado em uma revista potencialmente predatória *não
-significa* que este artigo seja de má qualidade. 
+* O fato de um artigo ser publicado em uma revista potencialmente predatória **não
+significa** que este artigo seja de má qualidade. 
 Um dos prejuízos causados pelos periódicos predatórios é justamente 
 potencialmente afetar a credibilidade de tais artigos.
 * Caso verifique qualquer problema ou tenha sugestões sobre trabalho 
