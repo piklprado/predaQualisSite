@@ -5,18 +5,37 @@ output:
     toc: true
 ---
 
+
 ```{r setup, echo=FALSE, warning=FALSE, message=F}
 library(knitr)
 library(ggplot2)
 library(VennDiagram)
 library(googleVis)
 library(DT)
+library(captioner)
 op <- options(gvis.plot.tag='chart')
 opts_chunk$set(fig.align = 'center', fig.show = 'hold', fig.height = 4,
                warning = FALSE, message = FALSE, error = FALSE, echo=FALSE)
 options(formatR.arrow = TRUE,width = 90, cache=TRUE)
 source("../static/verifica_predadores_qualis.R")
 ```
+
+```{r captions, results="hide"}
+tbls <- captioner(prefix="Tabela")
+
+tbls(name="areas", "Áreas da avaliação CAPES 2013-2016. A última coluna foi acrescentada por nós e não faz parte da classificação CAPES.")
+tbls(name="n-por-area", "Número de periódicos e de potencialmente predatórios, por área de avaliação. Também indicadas os percentuais do total de títulos potencialmente predatórios  e potencialmente predatórios classificados nos estratos A e B. As área estão em ordem crescente da proporção de potenciais predatórios classificados nos estratos A ou B.")
+
+tbls(name="perc_estrato", "Percentual de predatórios entre periódicos em cada estrato QUALIS. Indicados a média do percentual sobre as 49 áreas de avaliação, bem como os percentuais mínimos e máximos.")
+
+tbls(name= "n-pred-area", "Número de periódicos potencialmente predatórios e percentual destes classificados no estrato QUALIS C, por área de avaliação. As áreas estão agregadas por grande área e então ordenadas pela proporção de potenciais predatórios classificados no estrato C.")
+
+tbls(name="matriz-concord", "Melhor (colunas) e pior (linhas) classificação dos periódicos potencialmente predatórios que estão na base QUALIS e que foram avaliados por mais de uma área.")
+
+
+     
+```
+
 
 # Estatísticas descritivas
 
@@ -51,11 +70,12 @@ Na avaliação 2013-2016 os programas foram divididos em `r nrow(areas)` áreas,
 em `r length(unique(areas$grande.area))` grande áreas e três colégios (ciências da vida, exatas e humanas).
 A classificação de cada área em básica ou aplicada é nossa, para algumas análises estatísticas (mais abaixo).
 
+
+*`r tbls("areas")`*
 ```{r areas}
 kable(areas[order(areas$colegio,areas$grande.area, areas$res.area),],
       format="html",
-      col.names=c("Colégio", "Gde área", "Área", "Básica/Aplic."), row.names=FALSE,
-      caption="Áreas da avaliação CAPES 2013-2016. A última coluna foi acrescentada por nós não faz parte da classificação CAPES")
+      col.names=c("Colégio", "Gde área", "Área", "Básica/Aplic."), row.names=FALSE)
 ```
 
 
@@ -63,15 +83,15 @@ kable(areas[order(areas$colegio,areas$grande.area, areas$res.area),],
 
 A proporção de títulos potencialmente predatórios por área é pequena, mas ainda assim varia em uma ordem de grandeza, 
 o que indica tendências diversas dos programas de pós-graduação de cada área em publicar nestes periódicos:
+  
 
+*`r tbls("n-por-area")`*
 ```{r numeros_por_area}
 tmp <- n.pred2
 tmp$ppred <- round(100*tmp$tot.pred/tmp$tot,2)
 tmp$ppredAB <- round(100*(tmp$tot.pred-tmp$C)/tmp$tot,2)
 kable(tmp[order(tmp$ppredAB),c("area","tot","tot.pred","ppred", "ppredAB")],
-      col.names=c("Área", "Total", "Pot. Pred.", "% Pred.", "%Pred.A-B"), row.names=FALSE,
-      caption="Número de periódicos e de potencialmente predatórios, por área de avaliação. Também indicadas os percentuais do total de títulos potencialmente predatórios  e potencialmente predatórios classificados nos estratos A e B. As área estão em ordem crescente da proporção de potenciais predatórios classificados nos estratos A ou B.")
-
+      col.names=c("Área", "Total", "Pot. Pred.", "% Pred.", "%Pred.A-B"), row.names=FALSE)
 ```
 
 ## Distribuição dos predatórios nos estratos QUALIS
@@ -85,17 +105,14 @@ no QUALIS foram classificados nos estratos A e B por pelo menos uma área.
 Assim, periódicos potencialmente predatórios estão presentes em todos os estratos, 
 como mostra a tabela a seguir:
 
-
+*`r tbls("perc-estrato")`*
 ```{r percentual pred por estrato, echo=FALSE}
 pred.area %>%
     group_by(estrato) %>%
     dplyr::summarise(pred.p.mean=100*mean(all.pred/total),
               pred.p.min = 100*min(all.pred/total),
               pred.p.max = 100*max(all.pred/total)) %>%
-    kable(col.names=c("Estrato", "Média", "Mínimo", "Máximo"), digits=1,
-          format="html",
-          caption= "Percentual de predatórios entre periódicos em cada estrato QUALIS. Indicados a média do percentual sobre as 49 áreas de avaliação, bem como os percentuais mínimos e máximos.")
-    
+    kable(col.names=c("Estrato", "Média", "Mínimo", "Máximo"), digits=1)
 ```
 
 # Probabilidade de classificação de um predador no estrato QUALIS C
@@ -103,7 +120,7 @@ pred.area %>%
 Há grande variação entre as áreas quanto à proporção de potenciais predatórios
 classificados no estrato C:
 
-
+*`r tbls("n-pred-area")`*
 ```{r prop estrato C}
 tmp <- n.pred2
 tmp <- merge(tmp,areas, by="area")
@@ -111,8 +128,7 @@ tmp <- merge(tmp,areas, by="area")
 tmp$propC <- round(100*tmp$C/tmp$tot.pred,1)
 kable(tmp[order(tmp$grande.area,tmp$propC),c("grande.area","area","tot.pred","propC")],
       format="html",
-      col.names=c("Gde Área", "Área", "Total", "% em C"), row.names=FALSE,
-      caption="Número de periódicos potencialmente predatórios e percentual destes classificados no estrato QUALIS C, por área de avaliação. As áreas estão agregadas por grande área e então ordenadas pela proporção de potenciais predatórios classificados no estrato C")
+      col.names=c("Gde Área", "Área", "Total", "% em C"), row.names=FALSE)
 ```
 
 ## Congruência da avaliação entre áreas
@@ -126,12 +142,11 @@ por pelo menos uma das áreas que os avaliou. A seguir a matriz de concordância
 para os periódicos potencialmente predatórios avaliados por mais de uma área:
 
 
+*`r tbls("matriz-concord")`*
 ```{r matriz concordancia}
 kable(
-    with(pred.titles[pred.titles$N>1,], table (estrato.min, estrato.max)),
-    format="html",
-    caption=("Melhor (colunas) e pior (linhas) classificação dos periódicos potencialmente predatórios que estão na base QUALIS e que foram avaliados por mais de uma área.")
-    )
+    with(pred.titles[pred.titles$N>1,], table (estrato.min, estrato.max))
+)
 ```
 
 
