@@ -37,7 +37,7 @@ footnotereturnlinkcontents = "↩"
     weight = 6
 [params]
     description = "Periódicos potencialmente predatórios no QUALIS-CAPES"
-    footer = "[Paulo Inácio Prado](http://ecologia.ib.usp.br/let/doku.php?id=engl:prado:start) &  [Roberto André Kraenkel](http://www.ift.unesp.br/users/kraenkel/) 2017 | [Github](https://github.com/piklprado/predQualisHugo) "
+    footer = "[Paulo Inácio Prado](http://ecologia.ib.usp.br/let/doku.php?id=engl:prado:start) &  [Roberto André Kraenkel](http://www.ift.unesp.br/users/kraenkel/) & [Renato Mendes Coutinho](http://professor.ufabc.edu.br/~renato.coutinho/) 2017 | [Github](https://github.com/piklprado/predQualisHugo) "
 
   highlightjsVersion = "9.12.0"
   highlightjsCDN = "//cdn.bootcss.com"
