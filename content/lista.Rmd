@@ -13,7 +13,7 @@ source("../static/verifica_predadores_qualis.R")
 
 A tabela abaixo permite filtrar os títulos potencialmente predatórios
 por área de conhecimento e estrato QUALIS,
-e buscar periódicos pelo título e INSS.
+e buscar periódicos pelo título e ISSN.
 
 Você pode também usar a caixa de busca para procurar um *string* em
 qualquer lugar da tabela.
