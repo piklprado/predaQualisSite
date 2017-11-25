@@ -15,11 +15,12 @@ title: Metodologia
 
 * [QUALIS](/areas.csv): classificação de todos os periódicos por cada área, para a avaliação dos programas no quadriênio 2013-2016 (https://sucupira.capes.gov.br/); 
 
-## 3. Filtragem:
+## 3. Filtragem
+
 São retirados da lista:
 
-* Títulos constantes no [Directory of Open Access Journals](https://doaj.org/) são retirados da lista
-* Periódicos que não seguem estritamente o modelo de acesso aberto (p.ex, cobram taxas de assinaturas)
+* Títulos constantes no [Directory of Open Access Journals](https://doaj.org/);
+* Periódicos que não seguem estritamente o modelo de acesso aberto (p.ex, cobram taxas de assinaturas).
 
 ## 4. Códigos em R e arquivos resultantes:
 
