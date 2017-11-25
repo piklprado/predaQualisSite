@@ -2,18 +2,6 @@
 title: Metodologia
 ---
 
-```{r setup, echo=FALSE, warning=FALSE, message=F}
-library(knitr)
-#library(ggplot2)
-library(VennDiagram)
-library(googleVis)
-op <- options(gvis.plot.tag='chart')
-opts_chunk$set(fig.align = 'center', fig.show = 'hold', fig.height = 4,
-               warning = FALSE, message = FALSE, error = FALSE, echo=FALSE)
-options(formatR.arrow = TRUE,width = 90, cache=TRUE)
-source("../static/verifica_predadores_qualis.R")
-```
-
 ## 1. Compilação de uma lista de periódicos potencialmente predatórios combinando as seguintes bases:
 
 * [Lista de periódicos publicados pela editora OMICS](/omics.csv), uma das maiores editoras reconhecidamente predatórias [^4].
@@ -23,12 +11,17 @@ source("../static/verifica_predadores_qualis.R")
 	* [Periódicos no Scopus de editoras que estão na lista de Beall](/beals_publishers_in_scopus.csv): periódicos incluídos na base Scopus de 2017 (https://www.scopus.com/home.uri) e que são de editoras incluídas nas lista de Beall.
 
 
-## 2. Cruzamento com os títulos no QUALIS e conferência:
+## 2. Cruzamento com os títulos no QUALIS:
 
 * [QUALIS](/areas.csv): classificação de todos os periódicos por cada área, para a avaliação dos programas no quadriênio 2013-2016 (https://sucupira.capes.gov.br/); 
 
+## 3. Filtragem:
+São retirados da lista:
 
-## 3. Códigos em R e arquivos resultantes:
+* Títulos constantes no [Directory of Open Access Journals](https://doaj.org/) são retirados da lista
+* Periódicos que não seguem estritamente o modelo de acesso aberto (p.ex, cobram taxas de assinaturas)
+
+## 4. Códigos em R e arquivos resultantes:
 
 * [Código em R de processamento dos dados](/verifica_predadores_qualis.R)
 * [Base QUALIS com indicação dos potencialmente predatórios](/qualis_id_predadores.csv)

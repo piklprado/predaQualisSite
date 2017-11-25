@@ -15,14 +15,22 @@ title: Metodologia
 </ul></li>
 </ul>
 </section>
-<section id="cruzamento-com-os-titulos-no-qualis-e-conferencia" class="level2">
-<h2>2. Cruzamento com os títulos no QUALIS e conferência:</h2>
+<section id="cruzamento-com-os-titulos-no-qualis" class="level2">
+<h2>2. Cruzamento com os títulos no QUALIS:</h2>
 <ul>
 <li><a href="/areas.csv">QUALIS</a>: classificação de todos os periódicos por cada área, para a avaliação dos programas no quadriênio 2013-2016 (<a href="https://sucupira.capes.gov.br/" class="uri">https://sucupira.capes.gov.br/</a>);</li>
 </ul>
 </section>
+<section id="filtragem" class="level2">
+<h2>3. Filtragem:</h2>
+<p>São retirados da lista:</p>
+<ul>
+<li>Títulos constantes no <a href="https://doaj.org/">Directory of Open Access Journals</a> são retirados da lista</li>
+<li>Periódicos que não seguem estritamente o modelo de acesso aberto (p.ex, cobram taxas de assinaturas)</li>
+</ul>
+</section>
 <section id="codigos-em-r-e-arquivos-resultantes" class="level2">
-<h2>3. Códigos em R e arquivos resultantes:</h2>
+<h2>4. Códigos em R e arquivos resultantes:</h2>
 <ul>
 <li><a href="/verifica_predadores_qualis.R">Código em R de processamento dos dados</a></li>
 <li><a href="/qualis_id_predadores.csv">Base QUALIS com indicação dos potencialmente predatórios</a></li>

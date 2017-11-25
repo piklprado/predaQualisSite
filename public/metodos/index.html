@@ -50,6 +50,8 @@
         
         <li><a href="/resultados/">Resultados</a></li>
         
+        <li><a href="/noticias/">Notícias</a></li>
+        
         <li><a href="/autores/">Autores</a></li>
         
         
@@ -71,39 +73,55 @@
 
 
 
-<section id="compilacao-de-uma-lista-de-periodicos-potencialmente-predatorios-combinando-as-seguintes-bases" class="level2">
-<h2>1. Compilação de uma lista de periódicos potencialmente predatórios combinando as seguintes bases:</h2>
+
+
+<h2 id="1-compilação-de-uma-lista-de-periódicos-potencialmente-predatórios-combinando-as-seguintes-bases">1. Compilação de uma lista de periódicos potencialmente predatórios combinando as seguintes bases:</h2>
+
 <ul>
-<li><p><a href="/omics.csv">Lista de periódicos publicados pela editora OMICS</a>, uma das maiores editoras reconhecidamente predatórias <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p></li>
-<li>Lista de Periódicos com práticas questionáveis criada por Jeffrey Beall. A lista foi tirada do ar<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> mas há cópias disponíveis em vários sites, (e.g. <a href="http://beallslist.weebly.com/" class="uri">http://beallslist.weebly.com/</a>) . Extraímos dessa base de dados:
+<li><p><a href="/omics.csv">Lista de periódicos publicados pela editora OMICS</a>, uma das maiores editoras reconhecidamente predatórias <sup class="footnote-ref" id="fnref:4"><a rel="footnote" href="#fn:4">1</a></sup>.</p></li>
+
+<li><p>Lista de Periódicos com práticas questionáveis criada por Jeffrey Beall. A lista foi tirada do ar<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">2</a></sup> mas há cópias disponíveis em vários sites, (e.g.  <a href="http://beallslist.weebly.com/">http://beallslist.weebly.com/</a>) . Extraímos dessa base de dados:</p>
+
 <ul>
 <li><a href="/beals.csv">Standalone Journals List</a>: lista de títulos isolados potencialmente predadores, conforme está na base de Beall;</li>
-<li><a href="/beals_publishers_in_scopus.csv">Periódicos no Scopus de editoras que estão na lista de Beall</a>: periódicos incluídos na base Scopus de 2017 (<a href="https://www.scopus.com/home.uri" class="uri">https://www.scopus.com/home.uri</a>) e que são de editoras incluídas nas lista de Beall.</li>
+<li><a href="/beals_publishers_in_scopus.csv">Periódicos no Scopus de editoras que estão na lista de Beall</a>: periódicos incluídos na base Scopus de 2017 (<a href="https://www.scopus.com/home.uri">https://www.scopus.com/home.uri</a>) e que são de editoras incluídas nas lista de Beall.</li>
 </ul></li>
 </ul>
-</section>
-<section id="cruzamento-com-os-titulos-no-qualis-e-conferencia" class="level2">
-<h2>2. Cruzamento com os títulos no QUALIS e conferência:</h2>
+
+<h2 id="2-cruzamento-com-os-títulos-no-qualis">2. Cruzamento com os títulos no QUALIS:</h2>
+
 <ul>
-<li><a href="/areas.csv">QUALIS</a>: classificação de todos os periódicos por cada área, para a avaliação dos programas no quadriênio 2013-2016 (<a href="https://sucupira.capes.gov.br/" class="uri">https://sucupira.capes.gov.br/</a>);</li>
+<li><a href="/areas.csv">QUALIS</a>: classificação de todos os periódicos por cada área, para a avaliação dos programas no quadriênio 2013-2016 (<a href="https://sucupira.capes.gov.br/">https://sucupira.capes.gov.br/</a>);</li>
 </ul>
-</section>
-<section id="codigos-em-r-e-arquivos-resultantes" class="level2">
-<h2>3. Códigos em R e arquivos resultantes:</h2>
+
+<h2 id="3-filtragem">3. Filtragem:</h2>
+
+<p>São retirados da lista:</p>
+
+<ul>
+<li>Títulos constantes no <a href="https://doaj.org/">Directory of Open Access Journals</a> são retirados da lista</li>
+<li>Periódicos que não seguem estritamente o modelo de acesso aberto (p.ex, cobram taxas de assinaturas)</li>
+</ul>
+
+<h2 id="4-códigos-em-r-e-arquivos-resultantes">4. Códigos em R e arquivos resultantes:</h2>
+
 <ul>
 <li><a href="/verifica_predadores_qualis.R">Código em R de processamento dos dados</a></li>
 <li><a href="/qualis_id_predadores.csv">Base QUALIS com indicação dos potencialmente predatórios</a></li>
 <li><a href="/proporcao_pred_estrato_area.csv">Número de periódicos e de potenciais predatórios por área e estrato</a></li>
 <li><a href="/n_predadores_inclusivo_area.csv">Proporção de potenciais predatórios por área e estrato</a></li>
 </ul>
-</section>
-<section class="footnotes">
+<div class="footnotes">
+
 <hr />
+
 <ol>
-<li id="fn1"><p><a href="https://en.wikipedia.org/wiki/OMICS_Publishing_Group" class="uri">https://en.wikipedia.org/wiki/OMICS_Publishing_Group</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p><a href="http://www.universityworldnews.com/article.php?story=20170920150122306">Why Beall’s blacklist of predatory journals died. Paul Basken, The Chronicle of Higher Education22 September 2017 Issue No:475</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn:4"><a href="https://en.wikipedia.org/wiki/OMICS_Publishing_Group">https://en.wikipedia.org/wiki/OMICS_Publishing_Group</a>
+ <a class="footnote-return" href="#fnref:4">↩</a></li>
+<li id="fn:3"><a href="http://www.universityworldnews.com/article.php?story=20170920150122306">Why Beall’s blacklist of predatory journals died. Paul Basken, The Chronicle of Higher Education22 September 2017 Issue No:475</a>
+ <a class="footnote-return" href="#fnref:3">↩</a></li>
 </ol>
-</section>
+</div>
 
 
   <footer>
@@ -138,7 +156,7 @@ Analytics Made Easy - StatCounter"></a></div></noscript>
 
   
   <hr>
-  <div class="copyright"><a href="http://ecologia.ib.usp.br/let/doku.php?id=engl:prado:start">Paulo Inácio Prado</a> &amp;  <a href="http://www.ift.unesp.br/users/kraenkel/">Roberto André Kraenkel</a> &amp; <a href="http://professor.ufabc.edu.br/~renato.coutinho/">Renato Mendes Coutinho</a> 2017 | <a href="https://github.com/piklprado/predQualisHugo">Github</a></div>
+  <div class="copyright"><a href="http://ecologia.ib.usp.br/let/doku.php?id=engl:prado:start">Paulo Inácio Prado</a>,  <a href="http://www.ift.unesp.br/users/kraenkel/">Roberto André Kraenkel</a> &amp; <a href="http://professor.ufabc.edu.br/~renato.coutinho/">Renato Mendes Coutinho</a> 2017 | <a href="https://github.com/piklprado/predQualisHugo">Github</a></div>
   
   </footer>
   </article>
